@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Pendaftar</title>
+    <!-- Tambahkan link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Buat tab dengan Bootstrap -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="registrasi-tab" data-toggle="tab" href="#registrasi" role="tab" aria-controls="registrasi" aria-selected="true">Registrasi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="list-pendaftar-tab" data-toggle="tab" href="#list-pendaftar" role="tab" aria-controls="list-pendaftar" aria-selected="false">List Pendaftar</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <!-- Tab Registrasi -->
+            <div class="tab-pane fade show active" id="registrasi" role="tabpanel" aria-labelledby="registrasi-tab">
+                <div class="mt-4">
+                    <h3>Form Registrasi</h3>
+                    <!-- Buat form registrasi -->
+                    <form id="registration-form">
+                        <div class="form-group">
+                            <label for="nama">Nama (minimal 10 karakter)</label>
+                            <input type="text" class="form-control" id="nama" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="umur">Umur (minimal 25 tahun)</label>
+                            <input type="number" class="form-control" id="umur" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="uang-sangu">Uang Sangu (minimal 100 ribu dan maksimal 1 juta)</label>
+                            <input type="number" class="form-control" id="uang-sangu" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Tab List Pendaftar -->
+            <div class="tab-pane fade" id="list-pendaftar" role="tabpanel" aria-labelledby="list-pendaftar-tab">
+                <div class="mt-4">
+                    <h3>List Pendaftar</h3>
+                    <!-- Tampilkan tabel pendaftar di sini -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nama</th>
+                                <th>Umur</th>
+                                <th>Uang Sangu</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pendaftar-list">
+                            <!-- Data pendaftar akan ditampilkan di sini -->
+                        </tbody>
+                    </table>
+                    <!-- Tampilkan resume di sini -->
+                    <p>Rata-rata pendaftar memiliki uang sangu sebesar <span id="average-sangu">0</span> dengan rata-rata umur <span id="average-age">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tambahkan script Bootstrap dan JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="pendaftar.js"></script>
+</body>
+</html>
